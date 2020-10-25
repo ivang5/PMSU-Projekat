@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pmsu_projekat">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/preferences" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings" />
+
+        <activity
+            android:name=".FoldersActivity"
+            android:label="Folders"
+            android:parentActivityName=".EmailsActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ContactActivity"
+            android:label="Contact"
+            android:parentActivityName=".ContactsActivity"/>
+
+        <activity
+            android:name=".CreateFolderActivity"
+            android:label="Create Folder"
+            android:parentActivityName=".FoldersActivity"/>
+
+        <activity
+            android:name=".ContactsActivity"
+            android:label="Contacts"
+            android:parentActivityName=".EmailsActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile"
+            android:parentActivityName=".EmailsActivity">
+        </activity>
+
+        <activity
+            android:name=".FolderActivity"
+            android:label="Folder"
+            android:parentActivityName=".FoldersActivity"/>
+
+        <activity
+            android:name=".CreateContactActivity"
+            android:label="Create Contact"
+            android:parentActivityName=".ContactsActivity"/>
+
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".EmailActivity"
+            android:label="Email"
+            android:parentActivityName=".EmailsActivity"/>
+
+        <activity
+            android:name=".EmailsActivity"
+            android:label="Emails" />
+
+        <activity
+            android:name=".CreateEmailActivity"
+            android:label="Create Email"
+            android:parentActivityName=".EmailsActivity"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

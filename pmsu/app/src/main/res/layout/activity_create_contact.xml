@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateContactActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_account_circle_black_48dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/tv_ime"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/contact_icon"
+        android:gravity="center"
+        android:text="@string/tv_ime"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/tv_unesi_ime"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@id/tv_ime"
+        android:layout_toEndOf="@id/tv_ime"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tv_prezime"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_ime"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/tv_prezime"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/tv_unesi_prezime"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_unesi_ime"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tv_prezime"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_prezime"
+        android:text="@string/tv_email"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/tv_unesi_email"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_unesi_prezime"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tv_email"
+        android:inputType="textWebEmailAddress|textEmailAddress" />
+
+</RelativeLayout>

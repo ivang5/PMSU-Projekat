@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEmailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/tv_from"
+        android:textSize="20sp"
+        android:layout_below="@id/appbar"/>
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/tv_to"
+        android:layout_below="@id/tv_from"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="CC:"
+        android:layout_below="@id/tv_to"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_bcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="BCC:"
+        android:layout_below="@id/tv_cc"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/et_from"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_from"
+        android:layout_marginLeft="15dp"
+        android:inputType="textWebEmailAddress|textEmailAddress"
+        android:layout_below="@id/appbar"/>
+
+    <EditText
+        android:id="@+id/et_to"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_to"
+        android:layout_below="@id/et_from"
+        android:layout_alignLeft="@id/et_from"
+        android:inputType="textWebEmailAddress|textEmailAddress" />
+
+    <EditText
+        android:id="@+id/et_cc"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_cc"
+        android:layout_alignStart="@id/et_from"
+        android:inputType="textWebEmailAddress|textEmailAddress"
+        android:layout_below="@id/et_to"/>
+
+    <EditText
+        android:id="@+id/et_bcc"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_bcc"
+        android:layout_alignStart="@id/et_from"
+        android:inputType="textWebEmailAddress|textEmailAddress"
+        android:layout_below="@id/et_cc"/>
+
+
+    <EditText
+        android:id="@+id/et_subject"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bcc"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:hint="@string/hint_subject"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="381dp"
+        android:layout_height="551dp"
+        android:layout_below="@id/et_subject"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:background="@null"
+        android:hint="@string/hint_compose_email"
+        android:inputType="textMultiLine" />
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="@string/tv_username"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_alignStart="@id/appbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:id="@+id/tv_unesi_username"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/username"
+        android:gravity="bottom"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_edit_username"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_border_color_black_18dp"
+        android:layout_alignBottom="@id/tv_unesi_username"
+        android:layout_toEndOf="@id/tv_unesi_username"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="@string/tv_password"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@id/username"
+        android:layout_alignStart="@id/appbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/tv_unesi_password"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:inputType="textPassword"
+        android:layout_below="@id/tv_unesi_username"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/password"
+        android:gravity="bottom"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_edit_password"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_border_color_black_18dp"
+        android:layout_alignBottom="@id/tv_unesi_password"
+        android:layout_toEndOf="@id/tv_unesi_password"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/doge" />
+
+    <Button
+        android:id="@+id/btn_switch_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_account"
+        android:layout_below="@+id/btn_edit_password"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btnemails_background"
+        android:textColor="@android:color/white"/>
+
+
+
+</RelativeLayout>

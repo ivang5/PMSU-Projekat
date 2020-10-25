@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="refresh_settings"
+        android:title="@string/title_refresh_time">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/cb_refresh_key"
+            android:summary="@string/cb_text"
+            android:title="@string/cb_allow_refresh" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dependency="@string/cb_refresh_key"
+            android:dialogTitle="@string/list_refresh_time"
+            android:entries="@array/list_refresh_time_entries"
+            android:entryValues="@array/list_refresh_time_values"
+            android:key="@string/list_refresh_key"
+            android:summary="%s"
+            android:title="@string/list_refresh_time" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="sort_by_date_settings"
+        android:title="@string/title_sort_by_date">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/list_sort_by_date"
+            android:entries="@array/list_sort_by_date_entries"
+            android:entryValues="@array/list_sort_by_date_values"
+            android:key="@string/list_sort_by_date_key"
+            android:summary="%s"
+            android:title="@string/list_sort_by_date" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
